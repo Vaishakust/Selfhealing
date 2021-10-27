@@ -15,7 +15,7 @@
 	</properties>
 	
 	<build>
-
+        <testSourceDirectory>${basedir}/src/test/web</testSourceDirectory>
 
 		<plugins>
 
