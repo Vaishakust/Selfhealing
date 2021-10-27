@@ -1,0 +1,346 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Self Healing Report</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="css/jquery.dataTables.min.css">
+    <link rel="stylesheet" type="text/css" href="css/SH_style.css">
+    <script src="js/jquery.min.js"></script>
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery.dataTables.min.js"></script>
+    <script src="js/Chart.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="logo_sec">
+                <img src="img/sklogo.png" class="logo-size" alt="logo-skrptmate" />
+            </div>
+            <div class="text_sec">
+                <div class="heading1">Healing Test Report</div>
+                <div class="heading2"><span>Executed By: </span><span>Vaishak</span></div>
+                <div class="heading2"><span>Execution Time: </span><span>25/10/2021 08.49.45 AM</span></div>
+            </div>
+        </div>
+        <div class="row section_1">
+
+            <div class="col-md-6 col-lg-6 martp_style">
+                <div style="margin-top:20px;">
+                    <div class="box_style1">
+                        <div class="box_1">
+                            <div class="boxlabel1">NoSuchElement</div>
+                            <div class="boxlabel2">0</div>
+                        </div>
+                        <div class="logo_sec1">
+                            <img src="img/noelement.png" class="logo-size1" alt="NoSuchElement" />
+                        </div>
+                    </div>
+
+                    <div class="box_style2">
+                        <div class="box_1">
+                            <div class="boxlabel1">Stale/Timeout</div>
+                            <div class="boxlabel2">0</div>
+                        </div>
+                        <div class="logo_sec1">
+                            <img src="img/timeout.png" class="logo-size1" alt="Stale/Timeout" />
+                        </div>
+                    </div>
+                </div>
+
+                <div class="btm_box">
+                    <div class="box_style3">
+                        <div class="box_1">
+                            <div class="boxlabel1">Network Failures</div>
+                            <div class="boxlabel2">0</div>
+                        </div>
+                        <div class="logo_sec1">
+                            <img src="img/networkfailures.png" class="logo-size1" alt="Network Failures" />
+                        </div>
+                    </div>
+
+                    <div class="box_style4">
+                        <div class="box_1">
+                            <div class="boxlabel1">Others</div>
+                            <div class="boxlabel2">1</div>
+                        </div>
+                        <div class="logo_sec1">
+                            <img src="img/others.png" class="logo-size1" alt="Others" />
+                        </div>
+                    </div>
+                </div>
+
+                <span class="trend_style" data-toggle="modal" data-target="#myModal2">
+                    Last 5 Execution Trend
+                    <img src="img/graphicon2.png" class="graphicon" alt="graph icon" />
+                </span>
+            </div>
+
+            <div class="col-md-6 col-lg-6">
+                <div style="display: block;">
+                    <canvas id="myChart">
+                    </canvas>
+                    <div class="perc_style">0%</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="table_wrap">
+            <div>
+                <span class="legend1"><img src="img/bandage.png" class="logo-table" alt="Healed with Recommendations" />Healed with Recommendations</span>
+                <span class="legend2"><img src="img/Failed.png" class="logo-table1" alt="Attempted to Heal" />Attempted to Heal</span>
+            </div>
+            <div class="panel-group" id="accordion">
+                <div class="panel panel-default" id="webPanel">
+                    <div class="panel-heading">
+                        <h4 class="panel-title" style="color:#2a3f54;">
+                            <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapseOne">
+                                Web
+                            </a>
+                        </h4>
+                    </div>
+                    <div id="collapseOne" class="panel-collapse collapse in">
+                        <div class="panel-body">
+                     <!--        <div style="margin-top:15px;visibility:hidden;">
+                                <label style="font-weight:normal; font-size: 12px;"></label>
+                                <div class="filter_wrap">
+                                    <label style="font-weight:normal; font-size: 12px;">Filter</label>
+                                    <select id="web_filter">
+                                        <option value="10">Select</option>
+                                    </select>
+                                    <a id="web_filter_clear"><img src="img/clear_filter.png" class="filter_sz" alt="Clear filter" /></a>
+                                </div>
+                            </div> -->
+                            <div class='list' data='healDetail'><div><img src = 'img/Failed.png' class='logo-table1' alt='Attempted to Heal' /></div><div class="text_sec" style="flex:auto;"><div class="list_heading1"><span>Page Name : </span><span>NewPage</span></div>
+<div class="list_heading2"><span>Object Name : </span><span>input_Pleaseenteryour</span>&nbsp;&nbsp;&nbsp;<span>Exception : </span><span>InvalidElementStateException</span></div>
+</div>
+<div>
+<img src = 'img/info.png' class='logo-table2' data-toggle='modal' data-target='#Model1'' alt='info' />
+</div>
+</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="panel panel-default" id="mobPanel">
+                    <div class="panel-heading">
+                        <h4 class="panel-title" style="color:#2a3f54;">
+                            <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo">
+                                Mobile
+                            </a>
+                        </h4>
+                    </div>
+                    <div id="collapseTwo" class="panel-collapse collapse">
+                        <div class="panel-body">
+<!--                             <div style="margin-top:15px;visibility:hidden;">
+                                <label style="font-weight:normal; font-size: 12px;"></label>
+                                <div class="filter_wrap">
+                                    <label style="font-weight:normal; font-size: 12px;">Filter</label>
+                                    <select id="mob_filter">
+                                        <option value="10">Select</option>
+                                    </select>
+                                    <a id="mob_filter_clear"><img src="img/clear_filter.png" class="filter_sz" alt="Clear filter" /></a>
+                                </div>
+                            </div> -->
+                            {Mobtbody}
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <div class='modal fade' id='Model1' role='dialog'>
+<div class='modal-dialog' style='width:80%;'>
+<div class='modal-content'>
+<div class='modal-header'>
+<button type='button' class='close' data-dismiss='modal'>&times;</button>
+<h5 class='modal-title'>NewPage : input_Pleaseenteryour</h5>
+</div>
+<div class='modal-body'>
+<div class='panel-group' id='Accordin1'><div class='panel panel-default'>
+<div class='panel-heading'>
+<h4 class='panel-title' style='color:#2a3f54;'>
+<a class='accordion-toggle' data-toggle='collapse' data-parent='#Accordian11' href='#Collapse11'>
+Error Details</a>
+</h4>
+</div>
+<div id='Collapse11' class='panel-collapse collapse'>
+ <div class='panel-body'>
+<div class='row'>
+<div class='col-sm-12'>
+<table style='width:100%; table-layout:fixed; word-break:break-word;'>
+<tr>
+<th style='width:5%;'>&nbsp;</th>
+<th>&nbsp;</th>  
+<th style='text-align: center;width:15%;'>&nbsp;</th>
+</tr>
+<tr>
+<td><img src='img/infored.png' class='logo-tablepopup' alt='failed' /></td>
+<td>Unable to perform enterText action on an element id : user-message due to InvalidElementStateException</td>
+</tr><tr>
+<td>&nbsp;</td>
+<td style='padding-top: 10px;' colspan='2'>ERROR
+	STACKTRACE</td>
+</tr><tr>
+ <td></td>
+<td>org.openqa.selenium.InvalidElementStateException: invalid element state
+  (Session info: chrome=95.0.4638.54)
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'B300LCOK', ip: '192.168.29.58', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '16.0.2'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 95.0.4638.54, chrome: {chromedriverVersion: 94.0.4606.41 (333e85df3c9b6..., userDataDir: C:\Users\188162\AppData\Loc...}, goog:chromeOptions: {debuggerAddress: localhost:63147}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 3d3b59cdc15b402c159a570901c2b3f8</td> 
+</tr></table></div><div class='col-sm-12 col-md-5'>
+&nbsp;
+</div></div></div></div></div><div class='panel panel-default'>
+<div class='panel-heading'>
+<h4 class='panel-title' style='color:#2a3f54;'>
+<a class='accordion-toggle' data-toggle='collapse' data-parent='#Accordion13' href='#Collapse13'>
+Associated Test Cases
+</a>
+</h4>
+</div>
+<div id='Collapse13' class='panel-collapse collapse '>
+<div class='panel-body'><div class='tstcasewrap'>TC005_Amazon</div></div>
+</div>
+</div></div>
+</div>
+</div>
+</div>
+</div>
+    <div class="modal fade" id="myModal2" role="dialog">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h5 class="modal-title">Last 5 Execution Trend</h5>
+                </div>
+                <div class="modal-body">
+                    <div>
+                        <canvas id="line-chart"></canvas>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+</body>
+
+
+
+<script>
+    var ctx = document.getElementById("myChart").getContext('2d');
+    var myChart = new Chart(ctx, {
+        type: 'doughnut',
+        data: {
+            labels: ["Success", "Failure",],
+            datasets: [{
+                backgroundColor: [
+                    "#97cc64",
+                    "#fd5a3e"
+                ],
+                data: [0, 1]
+            }]
+        },
+        options: {
+            cutoutPercentage: 50
+        }
+    });
+
+    new Chart(document.getElementById("line-chart"), {
+        type: 'line',
+        data: {
+            labels: ["Run1", "Run2", "Run3", "Run4", "Run5"],
+            datasets: [{
+                data: [0,0,0,0,0,],
+                label: "NoSuchElement",
+                backgroundColor: '#3e95cd',
+                borderColor: "#3e95cd",
+                fill: false
+            }, {
+                data: [0,0,0,0,0,],
+                label: "Stale/TimeOut",
+                backgroundColor: '#8e5ea2',
+                borderColor: "#8e5ea2",
+                fill: false
+            }, {
+                data: [0,0,0,0,0,],
+                label: "Network Failures",
+                backgroundColor: '#3cba9f',
+                borderColor: "#3cba9f",
+                fill: false
+            }, {
+                data: [1,1,1,0,0,],
+                label: "Others",
+                backgroundColor: '#e8c3b9',
+                borderColor: "#e8c3b9",
+                fill: false
+            }
+            ]
+        },
+        options: {
+            title: {
+                display: true,
+                text: 'Healing Trend (per run)',
+                fontSize: 16,
+            },
+            legend: {
+                labels: {
+                    boxWidth: 20,
+                    padding: 10
+                }
+            },
+            scales: {
+                yAxes: [{
+                    scaleLabel: {
+                        display: true,
+                        labelString: 'Count'
+                    }
+                }],
+                xAxes: [{
+                    scaleLabel: {
+                        display: true,
+                        labelString: 'Last 5 Executions',
+                        fontStyle: 'bold',
+                    }
+
+                }]
+            }
+        }
+    });
+
+
+
+
+
+    //web
+
+    $("#web [data=errorMessage]").each(function (index) {
+        optionValue = $(this).text();
+        var exists = $("#web_filter option")
+            .filter(function (i, o) { return o.value === optionValue; })
+            .length > 0;
+        if (!exists) {
+            $("#web_filter").append(`<option value="${optionValue}">${optionValue}</option>`);
+        }
+    });
+    
+    $(document).ready(function () {
+        if ($('#collapseOne div .list').length == 0) {
+            $('#accordion .panel:eq(0)').hide();
+            $('a:contains("Mobile")').trigger("click");
+        }
+
+        if ($('#collapseTwo div .list').length == 0) {
+            $('#accordion .panel:eq(1)').hide();
+        }
+    });
+
+
+</script>
+</html>

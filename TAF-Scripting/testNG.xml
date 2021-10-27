@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<suite name="Suite">
+	<test name="testmob">
+		<classes>
+			<class name="com.scripted.selfHealingTests.Amazon" />
+		</classes>
+	</test>
+</suite>

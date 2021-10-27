@@ -1,0 +1,28 @@
+{
+  "testCase" : [ {
+    "testStep" : [ {
+      "technology" : "web",
+      "scrnShotPath" : "TC005_Amazon_20_10_2021_08_45_07_457_PM",
+      "excptnMsg" : "org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {\"method\":\"css selector\",\"selector\":\"#menu_admin_viewAdminModuleeee\"}\n  (Session info: chrome=94.0.4606.81)\nFor documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html\nBuild info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'\nSystem info: host: 'B300LCOK', ip: '192.168.29.58', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '16.0.2'\nDriver info: org.openqa.selenium.chrome.ChromeDriver\nCapabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 94.0.4606.81, chrome: {chromedriverVersion: 94.0.4606.41 (333e85df3c9b6..., userDataDir: C:\\Users\\188162\\AppData\\Loc...}, goog:chromeOptions: {debuggerAddress: localhost:64999}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}\nSession ID: 782aa7282325d0d0cd92cc2510a0ace7\n*** Element info: {Using=id, value=menu_admin_viewAdminModuleeee}",
+      "action" : "click",
+      "locatorEleMap" : {
+        "css" : "a#menu_admin_viewAdminModule > b",
+        "xpath_fullXPath" : "html/body/div[1]/div[2]/ul/li[1]/a/b",
+        "xpath_Parent" : "//a[@href='/index.php/admin/viewAdminModule']//b[1]",
+        "xpath_Contains" : "//b[text()='Admin']"
+      },
+      "healStatus" : "success",
+      "objectName" : "b_admintab",
+      "failedElement" : "id : menu_admin_viewAdminModuleeee",
+      "healedElement" : "xpath : //a[@href='/index.php/admin/viewAdminModule']//b[1]",
+      "pageName" : "OrangeHRMPage",
+      "testStepFailureReason" : "NoSuchElementException"
+    } ],
+    "testCaseName" : "TC005_Amazon"
+  } ],
+  "noSuchEleCount" : 1,
+  "stleTmeOutCount" : 0,
+  "netwrkErrCount" : 0,
+  "othersCount" : 0,
+  "testRunName" : "TestRun1"
+}

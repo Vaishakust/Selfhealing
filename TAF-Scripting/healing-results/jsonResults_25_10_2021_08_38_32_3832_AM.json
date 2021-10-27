@@ -1,0 +1,25 @@
+{
+  "testCase" : [ {
+    "testStep" : [ {
+      "technology" : "web",
+      "scrnShotPath" : null,
+      "excptnMsg" : "org.openqa.selenium.InvalidElementStateException: invalid element state\n  (Session info: chrome=95.0.4638.54)\nBuild info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'\nSystem info: host: 'B300LCOK', ip: '192.168.29.58', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '16.0.2'\nDriver info: org.openqa.selenium.chrome.ChromeDriver\nCapabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 95.0.4638.54, chrome: {chromedriverVersion: 94.0.4606.41 (333e85df3c9b6..., userDataDir: C:\\Users\\188162\\AppData\\Loc...}, goog:chromeOptions: {debuggerAddress: localhost:65489}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}\nSession ID: 2beb423b38c5d3927dfbc6469de2de7a",
+      "action" : "enterText",
+      "locatorEleMap" : {
+        "user-message" : "id"
+      },
+      "testStepFailureReason" : "InvalidElementStateException",
+      "pageName" : "NewPage",
+      "objectName" : "input_Pleaseenteryour",
+      "healedElement" : "null : NA",
+      "failedElement" : "id : user-message",
+      "healStatus" : "Failure"
+    } ],
+    "testCaseName" : "TC005_Amazon"
+  } ],
+  "noSuchEleCount" : 0,
+  "stleTmeOutCount" : 0,
+  "netwrkErrCount" : 0,
+  "othersCount" : 1,
+  "testRunName" : "TestRun1"
+}

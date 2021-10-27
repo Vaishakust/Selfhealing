@@ -1,0 +1,23 @@
+{
+  "testCase" : [ {
+    "testStep" : [ {
+      "technology" : "web",
+      "scrnShotPath" : null,
+      "excptnMsg" : "org.openqa.selenium.InvalidSelectorException: invalid selector: Unable to locate an element with the xpath expression //div[@id='navbar-collapse']/nav[1]/ul[1]/li[3]/a[1]123 because of the following error:\nSyntaxError: Failed to execute 'evaluate' on 'Document': The string '//div[@id='navbar-collapse']/nav[1]/ul[1]/li[3]/a[1]123' is not a valid XPath expression.\n  (Session info: chrome=94.0.4606.81)\nFor documentation on this error, please visit: https://www.seleniumhq.org/exceptions/invalid_selector_exception.html\nBuild info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'\nSystem info: host: 'B300LCOK', ip: '192.168.29.58', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '16.0.2'\nDriver info: org.openqa.selenium.chrome.ChromeDriver\nCapabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 94.0.4606.81, chrome: {chromedriverVersion: 94.0.4606.41 (333e85df3c9b6..., userDataDir: C:\\Users\\188162\\AppData\\Loc...}, goog:chromeOptions: {debuggerAddress: localhost:55457}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}\nSession ID: 70813d352358c6c86dd9cf9badbccb3e\n*** Element info: {Using=xpath, value=//div[@id='navbar-collapse']/nav[1]/ul[1]/li[3]/a[1]123}",
+      "action" : "click",
+      "locatorEleMap" : { },
+      "pageName" : "New",
+      "testStepFailureReason" : "InvalidSelectorException",
+      "healStatus" : "Failure",
+      "objectName" : "a_TestNG",
+      "failedElement" : "xpath : //div[@id='navbar-collapse']/nav[1]/ul[1]/li[3]/a[1]123",
+      "healedElement" : "null : NA"
+    } ],
+    "testCaseName" : "TC005_Amazon"
+  } ],
+  "noSuchEleCount" : 1,
+  "stleTmeOutCount" : 0,
+  "netwrkErrCount" : 0,
+  "othersCount" : 0,
+  "testRunName" : "TestRun1"
+}
