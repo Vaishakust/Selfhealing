@@ -34,7 +34,6 @@
 		<module>TAF-Reporting</module>
 		<module>TAF-SelfHealing</module>
 		<module>TAF-Web</module>
-		<module>TAF-Mobile</module>
-		
+		<module>TAF-Mobile</module>	
 	</modules>
 </project>
