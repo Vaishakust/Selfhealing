@@ -119,7 +119,7 @@ public class HealingConfig {
 
 					try {
 						byte[] jsonData = healingConfig.decryptFile(jsonPath).getBytes();
-						System.out.println("jsondatavalue" + jsonData.toString());
+						//System.out.println("jsondatavalue" + jsonData.toString());
 						Project project = objectMapper.readValue(jsonData, Project.class);
 						//System.out.println("project values"+ project.getProjectName());
 						//System.out.println("project values"+ project.getPageUrl());
