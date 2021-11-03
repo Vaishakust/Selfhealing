@@ -73,7 +73,7 @@ public class impactReportGeneration {
 			String reportPath = cdir +"/healing-results/" + reportName + ".json";
 			byte[] jsonData = Files.readAllBytes(Paths.get(reportPath));
 			String data = new String(jsonData);
-			System.out.println("jsonData :"+data);
+			//System.out.println("jsonData :"+data);
 			ObjectMapper objectMapper = new ObjectMapper();
 			RootTestCase root = objectMapper.readValue(jsonData, RootTestCase.class);
 			List<TestCase> testSteps = root.getTestCase();
