@@ -136,7 +136,7 @@ public class JsonObjectParser {
 										updData.put("value", HealedEle.get("value"));
 										//System.out.println("Attribute to be updated in json :" + updData.get("value"));
 										LocatorValue.setSelectedLocator(updData);
-										System.out.println("data in project :" + project);
+										//System.out.println("data in project :" + project);
 										jsonUpdateFilesData.put(jsonPath, project);
 									//	System.out.println("Json array updated : " + jsonFilesData);
 										jsonUpdateFlag = true;
