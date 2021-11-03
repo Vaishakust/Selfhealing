@@ -199,7 +199,7 @@ public class JsonObjectParser {
 		if (status == false) {
 			attributeValuesMap = null;
 		}
-      System.out.println(attributeValuesMap);
+     // System.out.println(attributeValuesMap);
 		return attributeValuesMap;
 	}
 
