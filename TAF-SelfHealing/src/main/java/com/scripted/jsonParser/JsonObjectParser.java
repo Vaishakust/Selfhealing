@@ -100,8 +100,8 @@ public class JsonObjectParser {
 	// #Method to parse the output json from spy#
 	public ConcurrentHashMap<String, String> jsonMapper(String pageNameValue, String elementNameValue, String locType,
 			ConcurrentHashMap<String, String>  HealedEle) throws IOException {
-		System.out.println("Page name in json parser: "+pageNameValue);
-		System.out.println("Element name in json parser: "+elementNameValue);
+		//System.out.println("Page name in json parser: "+pageNameValue);
+		//System.out.println("Element name in json parser: "+elementNameValue);
 		
 		Boolean status = false;
 		// ObjectMapper objectMapper = new ObjectMapper();
@@ -111,14 +111,14 @@ public class JsonObjectParser {
 			while (iterator.hasNext()) {
 				Entry<String, Project> entry = iterator.next();
 				jsonPath = entry.getKey();
-				System.out.println("json path " + jsonPath);
+				//System.out.println("json path " + jsonPath);
 				Project project = entry.getValue();
 				//StringBuffer value = new StringBuffer();
 				List<Pages> pages = project.getObjectRepository().getWebObjectRepo().getPages();
 
 				for (Pages pageObj : pages) {
 					pageName = pageObj.getPageName();
-					System.out.println("Page name :" + pageName);
+					//System.out.println("Page name :" + pageName);
 					if (pageNameValue.equals(pageName)) {
 						List<WebElements> webElements = pageObj.getWebElements();
 						for (WebElements webElement : webElements) {
@@ -126,7 +126,7 @@ public class JsonObjectParser {
 								status = true;
 
 								LocatorValue = webElement.getLocators();
-								System.out.println("Locator value :"+LocatorValue.toString());
+								//System.out.println("Locator value :"+LocatorValue.toString());
 								if (HealedEle != null) {
 									System.out.println("Healed Ele value :" + HealedEle);
 								/*	if (!locType.trim().equalsIgnoreCase(
@@ -134,7 +134,7 @@ public class JsonObjectParser {
 										ConcurrentHashMap<String, String> updData = new ConcurrentHashMap<>();
 										updData.put("attribute", HealedEle.get("key"));
 										updData.put("value", HealedEle.get("value"));
-										System.out.println("Attribute to be updated in json :" + updData.get("value"));
+										//System.out.println("Attribute to be updated in json :" + updData.get("value"));
 										LocatorValue.setSelectedLocator(updData);
 										System.out.println("data in project :" + project);
 										jsonUpdateFilesData.put(jsonPath, project);
