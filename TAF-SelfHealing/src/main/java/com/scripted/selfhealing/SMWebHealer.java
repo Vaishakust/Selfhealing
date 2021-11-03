@@ -490,7 +490,7 @@ public class SMWebHealer {
 			if (healInfoNS.get("PageName") != null && healInfoNS.get("ElementName") != null) {
 				attributeMap = jsonObjectParser.jsonMapper(healInfoNS.get("PageName"), healInfoNS.get("ElementName"),
 						healInfoNS.get("locatorType"), null);// check
-				System.out.println("Attribute map :" + attributeMap);
+				//System.out.println("Attribute map :" + attributeMap);
 			}
 
 			if (attributeMap != null && attributeMap.get("iframe") != null) {
