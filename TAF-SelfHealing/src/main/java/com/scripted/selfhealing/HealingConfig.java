@@ -110,7 +110,7 @@ public class HealingConfig {
 			File[] files = dir.listFiles();
 			for (File file : files) {
 				JsonPaths.add(skyFlePath + file.getName());
-				System.out.println(JsonPaths);
+				//System.out.println(JsonPaths);
 			}
 			HealingConfig healingConfig = new HealingConfig();
 			ObjectMapper objectMapper = new ObjectMapper();
@@ -121,9 +121,9 @@ public class HealingConfig {
 						byte[] jsonData = healingConfig.decryptFile(jsonPath).getBytes();
 						System.out.println("jsondatavalue" + jsonData.toString());
 						Project project = objectMapper.readValue(jsonData, Project.class);
-						System.out.println("project values"+ project.getProjectName());
-						System.out.println("project values"+ project.getPageUrl());
-						System.out.println("project values"+ project.getObjectRepository());
+						//System.out.println("project values"+ project.getProjectName());
+						//System.out.println("project values"+ project.getPageUrl());
+						//System.out.println("project values"+ project.getObjectRepository());
 						jsonFilesMap.put(jsonPath, project);
 						jsonFilesMap.forEach((k,v)-> System.out.println("jsonfilemapvalues" +"jsonPath: "+k+", project: "+v));
 					} catch (Exception e) {
