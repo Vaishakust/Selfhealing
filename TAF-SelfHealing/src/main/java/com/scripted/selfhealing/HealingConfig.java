@@ -125,7 +125,7 @@ public class HealingConfig {
 						//System.out.println("project values"+ project.getPageUrl());
 						//System.out.println("project values"+ project.getObjectRepository());
 						jsonFilesMap.put(jsonPath, project);
-						jsonFilesMap.forEach((k,v)-> System.out.println("jsonfilemapvalues" +"jsonPath: "+k+", project: "+v));
+						//jsonFilesMap.forEach((k,v)-> System.out.println("jsonfilemapvalues" +"jsonPath: "+k+", project: "+v));
 					} catch (Exception e) {
 						System.out.println("Exception " + e.getClass().getName() + " while reading file in : " + skyFlePath);
 						e.printStackTrace();
